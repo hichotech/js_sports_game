@@ -13,6 +13,19 @@ let team2shot = document.querySelector ("#teamtwo-shoot-button");
 resetcontainer.addEventListener ("click", function (){
     let newresetsnum = Number(resetsnum.innerHTML) + 1;
     resetsnum.innerHTML= newresetsnum;
+    if (team1shotsnum.innerHTML >= 1){
+        team1shotsnum.innerHTML=0;
+    }
+    if (team2shotsnum.innerHTML >= 1){
+     team2shotsnum.innerHTML=0;
+ }
+ if (team2goals.innerHTML >= 1){
+     team2goals.innerHTML=0;
+ }
+ if (team1goals.innerHTML >= 1){
+     team1goals.innerHTML=0;
+ }
+ 
 })
 
 team1shot.addEventListener ("click", function (){
