@@ -4,6 +4,9 @@ let team1goals = document.querySelector ("#teamone-numgoals");
 let team1shotsnum = document.querySelector ("#teamone-numshots"); 
 let team1shot = document.querySelector ("#teamone-shoot-button");
 
+let team2goals = document.querySelector ("#teamtwo-numgoals");
+let team2shotsnum = document.querySelector ("#teamtwo-numshots");
+let team2shot = document.querySelector ("#teamtwo-shoot-button");
 
 
 
@@ -23,4 +26,14 @@ team1shot.addEventListener ("click", function (){
     
     
 })
+team2shot.addEventListener ("click", function (){
+    if (Math.random() * 100 < 70){
+        let newteam2goals = Number(team2goals.innerHTML) + 1;
+    team2goals.innerHTML= newteam2goals;
 
+    }
+    let newteam2shotsnum = Number(team2shotsnum.innerHTML) + 1;
+    team2shotsnum.innerHTML= newteam2shotsnum;
+    
+    
+})
