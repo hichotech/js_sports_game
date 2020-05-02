@@ -8,11 +8,19 @@ let team2goals = document.querySelector ("#teamtwo-numgoals");
 let team2shotsnum = document.querySelector ("#teamtwo-numshots");
 let team2shot = document.querySelector ("#teamtwo-shoot-button");
 
+let winner = document.querySelector("#winner");
 
 
 resetcontainer.addEventListener ("click", function (){
     let newresetsnum = Number(resetsnum.innerHTML) + 1;
     resetsnum.innerHTML= newresetsnum;
+
+    if (team1goals.innerHTML>team2goals.innerHTML){
+        winner.innerHTML="team 1 won"}
+    if (team2goals.innerHTML>team1goals.innerHTML){
+            winner.innerHTML="team 2 won" 
+        }
+    
     if (team1shotsnum.innerHTML >= 1){
         team1shotsnum.innerHTML=0;
     }
