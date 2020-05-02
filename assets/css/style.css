@@ -1,15 +1,74 @@
+
+* {
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+}
+#reset-container , h1 ,#winner{
+    text-align: center;
+}
 .hide {
     display: none;
 }
-.left {
-    float: left;
+
+.fild {
+    
+    border: 1px solid black;
+    height: 750px;
+    width: 900px;
+    left: 400px;
+    left: 560px;
 }
-.right {
-    float: right;
+img {
+    height: 600px;
 }
 .clear {
     clear: both;
 }
-#reset-container, h1 {
-    text-align: center;
+.play2{
+    position: relative;
+    float:right;
+    top: -180px;
+    right: 10px;
+}
+.play1 {
+    position: relative;
+    top: -25px;
+    left: 10px;
+}
+#teamone-shoot-button {
+    position: relative;
+    top: -170px;
+    font-size: x-large;
+    left: 10px;
+}
+#teamtwo-shoot-button {
+    position: relative;
+    top: -258px;
+    font-size: x-large;
+    right: -78px;
+    float:right;
+}
+
+#reset-button {
+    font-size: x-large;
+}
+.goals1 {
+    position: relative;
+    top: -10px;
+    font-weight: bolder;
+    font-size: x-large;
+}
+.goals2 {
+    position: relative;
+    top: -100px;
+    left: 700px;
+    font-weight: bolder;
+    font-size: x-large;
+    
+}
+#num-resets{
+    font-size: xx-large;
 }
