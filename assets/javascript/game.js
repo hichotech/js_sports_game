@@ -10,10 +10,20 @@ let team2shot = document.querySelector ("#teamtwo-shoot-button");
 
 let winner = document.querySelector("#winner");
 
+let team1kick = new Audio();
+team1kick.src = "assets/sounds/FOOTBALLKICK.wav";
+
+let team2kick = new Audio();
+team2kick.src = "assets/sounds/FOOTBALLKICK.wav";
+
+let winnersound = new Audio();
+winnersound.src = "assets/sounds/winner.wav";
 
 resetcontainer.addEventListener ("click", function (){
     let newresetsnum = Number(resetsnum.innerHTML) + 1;
     resetsnum.innerHTML= newresetsnum;
+
+    winnersound.play();
 
     if (team1goals.innerHTML>team2goals.innerHTML){
         winner.innerHTML="team 1 won"}
@@ -39,13 +49,12 @@ resetcontainer.addEventListener ("click", function (){
 team1shot.addEventListener ("click", function (){
     if (Math.random() * 100 < 70){
         let newteam1goals = Number(team1goals.innerHTML) + 1;
-    team1goals.innerHTML= newteam1goals;
-
+    team1goals.innerHTML= newteam1goals;  
     }
     let newteam1shotsnum = Number(team1shotsnum.innerHTML) + 1;
     team1shotsnum.innerHTML= newteam1shotsnum;
-    
-    
+    team1kick.play();
+       
 })
 team2shot.addEventListener ("click", function (){
     if (Math.random() * 100 < 70){
@@ -55,6 +64,7 @@ team2shot.addEventListener ("click", function (){
     }
     let newteam2shotsnum = Number(team2shotsnum.innerHTML) + 1;
     team2shotsnum.innerHTML= newteam2shotsnum;
-    
+    team2kick.play();
     
 })
+

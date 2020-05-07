@@ -21,7 +21,7 @@ body {
     left: 400px;
     left: 560px;
 }
-img {
+.goaltarget {
     height: 600px;
 }
 .clear {
@@ -71,4 +71,20 @@ img {
 }
 #num-resets{
     font-size: xx-large;
+}
+#green {
+    position: relative;
+   
+    height: 70px;
+    width: 70px;
+    left: 220px;
+    top: -170px;
+    display: none;
+
+    
+    
+    
+
+
+
 }
